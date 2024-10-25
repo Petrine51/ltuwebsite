@@ -1,0 +1,239 @@
+* {
+    font-family: monospace;
+    font-weight: 700;
+  }
+
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #e0f2f1;
+}
+
+header {
+    background-color: #242424;
+    color: white;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.websitetitle {
+    margin: 0;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.websitetitle a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.websitetitle a:hover {
+    background-color: #8f002d;
+}
+
+nav {
+    display: flex;
+    align-items: stretch;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: stretch;
+}
+
+nav ul li {
+    display: flex;
+    align-items: stretch;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #8f002d;
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #e0f2f1;
+}
+
+
+.intro {
+    position: relative;
+    height: 40em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('Images/IMG_0103_ConferenceLocation02.bmp');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+}
+
+.intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.intro-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    max-width: 1200px;
+    width: 90%;
+    padding: 2rem;
+}
+
+.intro h2 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.intro p {
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.sections {
+    margin-bottom: 4rem;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.imagestyle {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.imagestyle img {
+    width: 100%;
+    height: 30rem auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.learn-more {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 96, 100, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.learn-more a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more a:hover {
+    background-color: white;
+    color: #006064;
+}
+
+.imagestyle:hover .learn-more {
+    opacity: 1;
+}
+
+.imagestyle:hover img {
+    transform: scale(1.05);
+}
+
+.descriptions {
+    flex: 1;
+    padding: 2rem;
+    background-color: rgba(224, 242, 241, 0.7);
+}
+
+.descriptions h2 {
+    color: #006064;
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.descriptions p {
+    font-size: 1.3rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+footer {
+    background-color: #242424;
+    color: #e0f2f1;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+    .sections {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .sections:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .imagestyle, .descriptions {
+        flex: 1;
+    }
+    
+    .imagestyle img {
+        height: 30rem;
+        object-fit: cover;
+    }
+}
